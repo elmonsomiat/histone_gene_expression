@@ -30,8 +30,6 @@ class GeneExpressionPredictor(object):
 
 
     def model_predictor(self, X_pred):
-        if self.model=='CNN':
-            X_pred = X_pred.reshape(X_pred.shape[0], X_pred.shape[1], X_pred.shape[2], 1)
         return self.loaded_model.predict(X_pred)
 
 
